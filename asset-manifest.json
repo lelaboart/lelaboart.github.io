@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/lelabuild/static/css/main.f02408d9.chunk.css",
+    "main.js": "/lelabuild/static/js/main.cbe309d9.chunk.js",
+    "main.js.map": "/lelabuild/static/js/main.cbe309d9.chunk.js.map",
+    "runtime-main.js": "/lelabuild/static/js/runtime-main.38be649e.js",
+    "runtime-main.js.map": "/lelabuild/static/js/runtime-main.38be649e.js.map",
+    "static/css/2.c2aa7b8c.chunk.css": "/lelabuild/static/css/2.c2aa7b8c.chunk.css",
+    "static/js/2.daf77ea6.chunk.js": "/lelabuild/static/js/2.daf77ea6.chunk.js",
+    "static/js/2.daf77ea6.chunk.js.map": "/lelabuild/static/js/2.daf77ea6.chunk.js.map",
+    "static/js/3.d470615b.chunk.js": "/lelabuild/static/js/3.d470615b.chunk.js",
+    "static/js/3.d470615b.chunk.js.map": "/lelabuild/static/js/3.d470615b.chunk.js.map",
+    "index.html": "/lelabuild/index.html",
+    "static/css/2.c2aa7b8c.chunk.css.map": "/lelabuild/static/css/2.c2aa7b8c.chunk.css.map",
+    "static/css/main.f02408d9.chunk.css.map": "/lelabuild/static/css/main.f02408d9.chunk.css.map",
+    "static/js/2.daf77ea6.chunk.js.LICENSE.txt": "/lelabuild/static/js/2.daf77ea6.chunk.js.LICENSE.txt",
+    "static/media/lesalon.css": "/lelabuild/static/media/imageIcon.6efc1d30.png",
+    "static/media/lelabo.css": "/lelabuild/static/media/laboIcon.d40c33f6.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.38be649e.js",
+    "static/css/2.c2aa7b8c.chunk.css",
+    "static/js/2.daf77ea6.chunk.js",
+    "static/css/main.f02408d9.chunk.css",
+    "static/js/main.cbe309d9.chunk.js"
+  ]
+}
