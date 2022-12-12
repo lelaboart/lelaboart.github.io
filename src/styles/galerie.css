@@ -78,6 +78,7 @@ img {
   opacity: 85%;
   /*object-fit: cover;*/
   /*mix-blend-mode: multiply;*/
+  opacity: initial !important;
 }
 
 .galerie .galerieItem:first-child {
@@ -95,6 +96,7 @@ img {
   opacity: 100%;
   mix-blend-mode: normal;
   flex-grow: 2;
+  opacity: initial !important;
   
 
 }

@@ -16,6 +16,7 @@ import { TABLE_NAME, viewType } from '../api/config'
 export const Nosmembers = ({ isOpenMenu, showArtists }) => {
   const [ShowDetails, setShowDetails] = useState(false);
   const [userSelected, setUserSelected] = useState({});
+  const [filteredTeamWork, setFilteredTeamWork] = useState([])
   const history = useNavigate();
 
   // use the same component for equipe only need change the query for the correct table
@@ -26,10 +27,18 @@ export const Nosmembers = ({ isOpenMenu, showArtists }) => {
   const toggleDetails = () => setShowDetails(!ShowDetails);
 
   useEffect(() => {
+    if(artistMembersListBase.length === 0) return
     setArtistMembers(artistMembersListBase.filter(
-      artistMember => artistMember['Image profil'])
+      artistMember => artistMember['Image profil'] && artistMember.Statut === "1")
     )
   }, [artistMembersListBase]);
+
+  useEffect(() => {
+    if(teamWork.length === 0) return
+    setFilteredTeamWork(teamWork.filter(
+      artistMember => artistMember.Statut === "1" && artistMember.Photo)
+    )
+  }, [teamWork]);
 
   return (
     !isOpenMenu && (
@@ -60,7 +69,7 @@ export const Nosmembers = ({ isOpenMenu, showArtists }) => {
                   );
                 })
                 :
-                teamWork.map((member) => {
+                filteredTeamWork.map((member) => {
                   return (
                     <Membercard
                       key={member.ID}

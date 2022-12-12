@@ -13,6 +13,7 @@ export const Expo = ({ isOpenMenu }) => {
   const [Showdetail, setShowdetail] = useState(false)
   const [EventChoosen, setEventChoosen] = useState('')
   const eventsList = useListBase(TABLE_NAME.event, viewType.creationEdv)
+  const [filteredEvents, setFilteredEvents] = useState([])
 
   const handleShowdetail = (event) => {
     setShowdetail(!Showdetail)
@@ -39,6 +40,13 @@ export const Expo = ({ isOpenMenu }) => {
       })
     }
   }
+
+  useEffect(() => {
+    if (eventsList.length === 0) return
+    setFilteredEvents(
+      eventsList.filter(event => new Date(event['Date de début*']) > new Date()))
+  }, [eventsList])
+
   return (
     !isOpenMenu && (
       <div className="expocontent">
@@ -92,7 +100,7 @@ export const Expo = ({ isOpenMenu }) => {
             </div>
           ) : (
             <div className="expocontent">
-              {eventsList.map((event) => {
+              {filteredEvents.map((event) => {
                 return (
                   <EventCard
                     key={event.ID}
